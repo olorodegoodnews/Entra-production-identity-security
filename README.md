@@ -1,40 +1,49 @@
-# Entra-production-identity-security
-Production-style Microsoft Entra identity security project covering Conditional Access, emergency access, PIM, policy testing, and security documentation.
-
-
 # Production-Style Microsoft Entra Identity Security
 
-## Overview
+## Project Overview
 
-This project demonstrates the design and implementation of a production-style Microsoft Entra identity security environment.
+This project implements a production-style Microsoft Entra identity security environment.
 
-The project focuses on identity security controls including emergency access, Conditional Access, privileged access management, policy validation, and security documentation.
+The environment is treated as a production identity environment rather than a sandbox. Security controls are designed, tested, validated, and documented before enforcement.
 
-## Objectives
+## Project Objectives
 
-- Establish emergency access accounts
-- Implement an MFA baseline
+- Build Conditional Access policies from scratch
+- Configure break-glass exclusions
+- Establish an MFA baseline
+- Require device compliance
 - Block legacy authentication
-- Implement device compliance controls
-- Test Conditional Access policies using What If
+- Implement risk-based Conditional Access policies
+- Validate policies using What-If
 - Validate policies using Report-only mode
-- Implement privileged access controls
-- Analyze overlapping Conditional Access policies
-- Document the rationale behind each security policy
+- Configure Privileged Identity Management for Global Administrator
+- Configure PIM for one Azure resource role
+- Require approval and justification for privileged activation
+- Analyze the behavior of three overlapping Conditional Access policies
+- Produce a one-page security rationale for each policy
 
 ## Environment
 
 | Component | Configuration |
 |---|---|
-| Identity Platform | Microsoft Entra ID |
+| Identity platform | Microsoft Entra ID |
 | Tenant | Default Directory |
-| Primary Domain | Project tenant `olorodegoodnews797gmail.onmicrosoft.com`domain |
-| Entra License | Microsoft Entra ID P1 |
-| Security Model | Production-style |
+| Primary domain | olorodegoodnews797gmail.onmicrosoft.com |
+| Entra license | Microsoft Entra ID P1 |
+| Environment model | Production-style |
 
-## Project Structure
+## Security Approach
 
-- `project-overview.md` — project objectives and security approach
-- `policies/` — Conditional Access policy documentation
-- `pim/` — Privileged Identity Management documentation
-- `testing/` — policy testing and validation
+Conditional Access policies will be created from scratch and tested before enforcement.
+
+What-If and Report-only mode will be used to validate policy behavior.
+
+Break-glass accounts will be excluded from applicable policies to reduce the risk of administrative lockout.
+
+Privileged administrative access will be controlled using Microsoft Entra Privileged Identity Management where the required licensing is available.
+
+## Success Criteria
+
+The project will be considered successful when the implemented policies can be tested and explained, including a scenario where three Conditional Access policies apply to the same sign-in.
+
+The final test will demonstrate how the applicable policies combine to produce the resulting access decision.
