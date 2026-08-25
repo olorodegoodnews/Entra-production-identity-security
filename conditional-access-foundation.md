@@ -9,6 +9,8 @@ A dedicated break-glass account was created to provide emergency administrative 
 - Account: BG-Admin-01
 - Role: Global Administrator
 - Purpose: Emergency tenant recovery
+  
+- ![BG-Admin-01 Global Administrator Role](04-break-glass-global-admin.png.png)
 
 ### Conditional Access Design
 
