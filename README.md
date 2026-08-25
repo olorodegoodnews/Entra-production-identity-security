@@ -28,7 +28,7 @@ The project focuses on identity security controls including emergency access, Co
 |---|---|
 | Identity Platform | Microsoft Entra ID |
 | Tenant | Default Directory |
-| Primary Domain | Project tenant `.onmicrosoft.com` domain |
+| Primary Domain | Project tenant `olorodegoodnews797gmail.onmicrosoft.com`domain |
 | Entra License | Microsoft Entra ID P1 |
 | Security Model | Production-style |
 
