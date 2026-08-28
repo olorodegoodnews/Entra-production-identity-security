@@ -53,3 +53,34 @@ The expected result for BG-Admin-01 is that the account is excluded from the pol
 ## Final Decision
 
 The policy will only be enabled after its behavior has been validated and the expected results have been confirmed.
+
+
+## Testing
+
+### What-If Test — CA-Test-User
+
+The CA-Test-User identity was evaluated using Conditional Access What-If.
+
+Expected result:
+
+- CA-01 - MFA Baseline applies
+- The policy requires multifactor authentication
+- Because the policy is in Report-only mode, the requirement is evaluated but not enforced
+
+### What-If Test — BG-Admin-01
+
+The BG-Admin-01 identity was evaluated using Conditional Access What-If.
+
+Expected result:
+
+- CA-01 - MFA Baseline does not apply
+- The account is excluded from the policy
+- The exclusion protects emergency administrative access from this policy
+
+### CA-Test-User What-If
+
+![CA-Test-User What-If](../07-what-if-mfa-test-user.png.png)
+
+### BG-Admin-01 What-If
+
+![BG-Admin-01 What-If](../08-what-if-mfa-break-glass.png.png)
