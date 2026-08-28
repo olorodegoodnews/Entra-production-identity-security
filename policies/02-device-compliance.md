@@ -69,3 +69,12 @@ CA-02 - Device Compliance appeared in the applicable policies, confirming that t
 The What-If result confirms policy applicability but does not establish that the user's device is compliant. Device compliance requires an applicable Microsoft Intune compliance state.
 
 ![Device Compliance What-If Test](../11-what-if-device-compliance-test-user.png.png)
+
+
+### What-If Test — BG-Admin-01
+
+BG-Admin-01 was evaluated using Conditional Access What-If.
+
+No applicable Conditional Access policies were returned for the account, confirming that the break-glass account is excluded from CA-02 - Device Compliance.
+
+![Break-Glass What-If Test](../12-what-if-device-compliance-break-glass.png.png)
