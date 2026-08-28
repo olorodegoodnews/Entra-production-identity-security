@@ -57,3 +57,15 @@ Because the current environment does not yet have a registered/compliant device,
 ## Final Decision
 
 The policy will remain in Report-only mode until its behavior and the required Intune device-compliance dependency have been validated.
+
+## Testing 
+
+### What-If Test — CA-Test-User
+
+CA-Test-User was evaluated using Conditional Access What-If.
+
+CA-02 - Device Compliance appeared in the applicable policies, confirming that the user is within the policy scope.
+
+The What-If result confirms policy applicability but does not establish that the user's device is compliant. Device compliance requires an applicable Microsoft Intune compliance state.
+
+![Device Compliance What-If Test](../11-what-if-device-compliance-test-user.png.png)
