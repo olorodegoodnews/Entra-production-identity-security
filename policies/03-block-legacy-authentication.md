@@ -76,3 +76,23 @@ Sign-in logs will be reviewed for legacy client activity.
 The policy will remain in Report-only mode while sign-in logs are reviewed for legacy authentication activity.
 
 The policy can be moved to enforcement after confirming that blocking legacy authentication will not disrupt required services or applications.
+
+## Validation Results
+
+### Modern Authentication Test
+
+Conditional Access What-If was performed using:
+
+- User: CA-Test-User
+- Client application: Browser
+- Device platform: Windows
+
+### Result
+
+CA-03 did not apply.
+
+This result is expected because the policy targets legacy authentication clients rather than modern browser authentication.
+
+This validation confirms that the policy is scoped specifically to legacy authentication and does not unnecessarily affect modern authentication requests.
+
+![Modern Authentication What-If Test](../18-what-if-modern-authentication.png.png)
