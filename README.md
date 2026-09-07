@@ -1,16 +1,3 @@
-GitHub Repository
-│
-├── README.md ← Main project overview
-│
-├── policies/
-│
-├── intune/
-│
-├── pim/
-│
-└── testing/
-
-
 # Microsoft Entra ID Production-Style Identity Security Lab
 
 ## Project Overview
