@@ -1,6 +1,6 @@
 # Microsoft Entra ID Production-Style Identity Security Lab
 
-## Project Overview
+## Documentation Overview
 
 This project demonstrates the implementation of a production-style Microsoft Entra ID identity and access management environment.
 
@@ -10,7 +10,7 @@ The implementation follows a controlled deployment approach by configuring secur
 
 ---
 
-# Project Objectives
+# Documentation Objectives
 
 The project was designed to implement and demonstrate:
 
