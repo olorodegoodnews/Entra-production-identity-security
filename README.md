@@ -1,49 +1,63 @@
-# Production-Style Microsoft Entra Identity Security
+GitHub Repository
+│
+├── README.md ← Main project overview
+│
+├── policies/
+│
+├── intune/
+│
+├── pim/
+│
+└── testing/
+
+
+# Microsoft Entra ID Production-Style Identity Security Lab
 
 ## Project Overview
 
-This project implements a production-style Microsoft Entra identity security environment.
+This project demonstrates the implementation of a production-style Microsoft Entra ID identity and access management environment.
 
-The environment is treated as a production identity environment rather than a sandbox. Security controls are designed, tested, validated, and documented before enforcement.
+A dedicated Microsoft Entra tenant was configured and treated as a production environment rather than a sandbox. The project focuses on Conditional Access, identity protection, device compliance, privileged access management, and security validation.
 
-## Project Objectives
+The implementation follows a controlled deployment approach by configuring security policies in Report-only mode and validating policy behavior before enforcement.
 
-- Build Conditional Access policies from scratch
-- Configure break-glass exclusions
-- Establish an MFA baseline
-- Require device compliance
-- Block legacy authentication
-- Implement risk-based Conditional Access policies
-- Validate policies using What-If
-- Validate policies using Report-only mode
-- Configure Privileged Identity Management for Global Administrator
-- Configure PIM for one Azure resource role
-- Require approval and justification for privileged activation
-- Analyze the behavior of three overlapping Conditional Access policies
-- Produce a one-page security rationale for each policy
+---
 
-## Environment
+# Project Objectives
 
-| Component | Configuration |
-|---|---|
-| Identity platform | Microsoft Entra ID |
-| Tenant | Default Directory |
-| Primary domain | olorodegoodnews797gmail.onmicrosoft.com |
-| Entra license | Microsoft Entra ID P1 |
-| Environment model | Production-style |
+The project was designed to implement and demonstrate:
 
-## Security Approach
+- Dedicated Microsoft Entra ID tenant administration
+- Emergency break-glass access
+- Conditional Access policies built from scratch
+- Multifactor authentication baseline
+- Device compliance controls
+- Legacy authentication blocking
+- Sign-in risk protection
+- User risk remediation
+- Conditional Access What-If testing
+- Report-only policy validation
+- Conditional Access policy overlap analysis
+- Privileged Identity Management for Global Administrator
+- Approval and justification for privileged role activation
+- GitHub documentation of the implementation
 
-Conditional Access policies will be created from scratch and tested before enforcement.
+---
 
-What-If and Report-only mode will be used to validate policy behavior.
+# Architecture
 
-Break-glass accounts will be excluded from applicable policies to reduce the risk of administrative lockout.
-
-Privileged administrative access will be controlled using Microsoft Entra Privileged Identity Management where the required licensing is available.
-
-## Success Criteria
-
-The project will be considered successful when the implemented policies can be tested and explained, including a scenario where three Conditional Access policies apply to the same sign-in.
-
-The final test will demonstrate how the applicable policies combine to produce the resulting access decision.
+```text
+                         Microsoft Entra ID
+                                │
+        ┌───────────────────────┼────────────────────────┐
+        │                       │                        │
+        ▼                       ▼                        ▼
+   Identity Security      Conditional Access       Privileged Access
+        │                       │                        │
+        │                       │                        │
+        ▼                       ▼                        ▼
+   Break-Glass Account     CA-01 MFA Baseline      PIM Global Admin
+                           CA-02 Device Compliance
+                           CA-03 Block Legacy Auth
+                           CA-04 Sign-in Risk
+                           CA-05 User Risk
